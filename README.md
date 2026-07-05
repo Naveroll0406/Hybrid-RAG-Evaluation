@@ -43,5 +43,5 @@ Here are the final RAGAS evaluation scores proving the pipeline's effectiveness:
 *(Execution traces and breakdowns are available in the LangSmith dashboard).*
 
 ### LangSmith Execution Trace
-You can view a live, interactive execution trace of this pipeline directly in LangSmith:
-🔗 **[View LangSmith Trace (RAGAS Evaluation)](https://smith.langchain.com/public/0f9486a0-bd8e-478f-a528-697b9e7d1934/r/019f32d0-e5ea-7cc3-b5d5-eef19ce41967)**
+
+You can view a live, interactive execution trace of this pipeline directly in LangSmith: 🔗 [View LangSmith Trace (RAGAS Evaluation)](https://smith.langchain.com/public/0f9486a0-bd8e-478f-a528-697b9e7d1934/r/019f32d0-e5ea-7cc3-b5d5-eef19ce41967)

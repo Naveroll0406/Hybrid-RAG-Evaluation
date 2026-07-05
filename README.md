@@ -22,3 +22,13 @@ This pipeline was rigorously evaluated using **RAGAS (LLM-as-a-judge)** and trac
 ## Files
 - `Hybrid_RAG.py`: The ingestion script that parses PDFs, chunks the text, builds the FAISS/BM25 indexes, and sets up the retrieval logic.
 - `evaluate_rag.py`: The evaluation script that loads the indexes, defines the generation prompt, executes the RAG pipeline, and grades it using RAGAS.
+
+## Results
+
+Here are the evaluation results and tracing dashboards proving the pipeline's effectiveness:
+
+### RAGAS Evaluation Scores
+![RAGAS Scores](ragas.png)
+
+### LangSmith Execution Traces
+![LangSmith Trace](LangSmith.png)

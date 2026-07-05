@@ -25,10 +25,19 @@ This pipeline was rigorously evaluated using **RAGAS (LLM-as-a-judge)** and trac
 
 ## Results
 
-Here are the evaluation results and tracing dashboards proving the pipeline's effectiveness:
+Here are the final RAGAS evaluation scores proving the pipeline's effectiveness:
 
-### RAGAS Evaluation Scores
-![RAGAS Scores](ragas.png)
+```text
+============================================================
+📊 RAGAS EVALUATION RESULTS
+============================================================
 
-### LangSmith Execution Traces
-![LangSmith Trace](LangSmith.png)
+🏆 OVERALL SCORES:
+----------------------------------------
+  faithfulness              ███████████████████░ 0.9688
+  answer_relevancy          █████████████████░░░ 0.8628
+  context_precision         ████████████████░░░░ 0.8171
+  context_recall            ████████████████░░░░ 0.8333
+```
+
+*(Execution traces and breakdowns are available in the LangSmith dashboard).*

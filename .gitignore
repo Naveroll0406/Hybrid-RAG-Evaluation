@@ -1,0 +1,9 @@
+.env
+*.pdf
+faiss_index/
+faiss_index_pdf/
+*.pkl
+rag_cache.json
+ragas_results*.png
+walkthrough.md
+__pycache__/

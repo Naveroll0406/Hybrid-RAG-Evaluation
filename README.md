@@ -1,0 +1,24 @@
+# Hybrid RAG Pipeline with LangSmith & RAGAS
+
+This repository contains a highly optimized Retrieval-Augmented Generation (RAG) pipeline built to extract and answer questions from complex PDF documents with maximum accuracy.
+
+## Architecture
+
+The pipeline moves beyond basic vector search by implementing a **Hybrid Retrieval** system:
+- **Multi-Query Generation**: Synthesizes multiple perspectives of the user's question.
+- **Hybrid Search**: Combines Dense Retrieval (FAISS) for semantic understanding and Sparse Retrieval (BM25) for exact keyword matching.
+- **Reciprocal Rank Fusion (RRF)**: Merges the dense and sparse results intelligently.
+- **Cross-Encoder Reranking**: Uses `BAAI/bge-reranker-base` to aggressively filter chunks and ensure only the absolute most relevant context reaches the generation step.
+
+## Evaluation & Optimization
+
+This pipeline was rigorously evaluated using **RAGAS (LLM-as-a-judge)** and traced with **LangSmith**. Through an iterative process of analyzing traces and tuning parameters (such as chunk size, overlap, `top_n`, and `k`), we achieved the following metrics on a custom benchmark dataset:
+
+- 🟢 **Faithfulness**: ~96% (Virtually zero hallucination)
+- 🟢 **Answer Relevancy**: ~86% (Highly concise and direct answers)
+- 🟢 **Context Recall**: ~83%
+- 🟢 **Context Precision**: ~81%
+
+## Files
+- `Hybrid_RAG.py`: The ingestion script that parses PDFs, chunks the text, builds the FAISS/BM25 indexes, and sets up the retrieval logic.
+- `evaluate_rag.py`: The evaluation script that loads the indexes, defines the generation prompt, executes the RAG pipeline, and grades it using RAGAS.

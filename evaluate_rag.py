@@ -589,7 +589,7 @@ print("=" * 60)
 
 nvidia_client = AsyncOpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key="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",
+    api_key=os.environ.get("NVIDIA_API_KEY"),
     timeout=300.0,
     max_retries=5,
 )
